@@ -2,17 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class inicio : MonoBehaviour
-{
-    public GameObject texto;
-    public Button boton;
+{ 
+    
     // Start is called before the first frame update
     void Start()
     {
-        boton = GetComponent<Button>();
-        boton.onClick.AddListener(click);
+       
     }
 
     // Update is called once per frame
@@ -21,8 +19,15 @@ public class inicio : MonoBehaviour
         
     }
 
-    public void click()
+    public void Iniciar()
     {
-        texto.gameObject.SetActive(false);
+        SceneManager.LoadScene(1);
+    }
+
+
+    public void Salir()
+    {
+        Debug.Log("Saliendo del juego...");
+        Application.Quit();
     }
 }

@@ -15,6 +15,6 @@ public class Seguimiento : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position =new Vector3(jugador.transform.position.x,1.7f, jugador.transform.position.z);
+        transform.position =new Vector3(jugador.transform.position.x,2.0f, jugador.transform.position.z);
     }
 }
